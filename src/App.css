@@ -1,0 +1,50 @@
+.Types-Ability {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+.Body {
+  margin: 0;
+}
+
+.ContainerImgName{
+  display: flex;
+  flex-direction: column;
+}
+
+.results {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px;
+ 
+  flex-direction: row;
+  align-content: flex-end;
+  margin: 50px;
+}
+
+.PokemonImg {
+  width: 200px;
+  border: 3px solid var(--border-img);
+  border-radius: 10px;
+  box-shadow: 4px 4px 5px #111;
+}
+
+.logo-pagina {width: 200px;}
+
+.barra-principal {
+  background-color: #bb2a12;
+  padding: 30px 40px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+

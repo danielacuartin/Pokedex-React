@@ -1,0 +1,15 @@
+.info p {
+    margin: 10px;
+}
+
+p {
+    margin: 0px;
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #5098d6;
+    margin: 0px;
+}
