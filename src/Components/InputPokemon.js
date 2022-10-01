@@ -1,7 +1,7 @@
 import './InputPokemon.css';
 
 const InputPokemon = (props) => {
-    const { searchInput, setSearchInput, setPokemonName, setPokemonSprite } = props;
+    const { searchInput, setSearchInput, setPokemonName, setPokemonSprite, setPokemonDataObject } = props;
 
 return (
     <section>
@@ -18,6 +18,7 @@ return (
             .then((data) => {
               setPokemonName(data.name);
               setPokemonSprite(data.sprites.front_default)
+              setPokemonDataObject(data);
             })
         }}
       >

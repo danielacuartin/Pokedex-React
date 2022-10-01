@@ -4,7 +4,7 @@ import InputPokemon from './Components/InputPokemon';
 import logo from './descarga.png'
 import AbilityPokemon from './Components/AbilityPokemon';
 import TypePokemon from './Components/TypePokemon';
-import Features from './Components/Features';
+import Stats from './Components/Stats';
 import InfoPokemon from './Components/InfoPokemon';
 
 function App() {
@@ -27,6 +27,7 @@ function App() {
         const {name, sprites: { front_default } } = data;
         setPokemonName(name);
         setPokemonSprite(front_default)
+        setPokemonDataObject(data)
       })
       .catch((err) => console.warn(err))
     return () => {
@@ -41,11 +42,12 @@ function App() {
       searchInput={searchInput} 
       setSearchInput={setSearchInput}
       setPokemonName={setPokemonName}
-      setPokemonSprite={setPokemonSprite}/>
+      setPokemonSprite={setPokemonSprite}
+      setPokemonDataObject={setPokemonDataObject}/>
        </div>
-        <main className='container'>
+{    pokemonDataObject &&   <main className='container'>
         
-      <div className='ConteinerImgName'>
+   <div className='ConteinerImgName'>
             <h1>{pokemonName}</h1>
              <img className='PokemonImg' src={pokemonSprite ? pokemonSprite : ''} 
       alt='pokemon-sprite' />
@@ -56,12 +58,17 @@ function App() {
       <InfoPokemon/>
       <div className='Types-Ability'>
        
-        <TypePokemon/>
-      <AbilityPokemon/>
+        <TypePokemon types={pokemonDataObject.types}/>
+      <AbilityPokemon abilities={pokemonDataObject.abilities}/>
+      
       </div>
-      <Features/>
       </section>
-      </main>
+      
+      <section className='stats'>
+      <Stats stats={pokemonDataObject.stats}/>
+       </section>
+      
+      </main>}
 
     </div>
   )

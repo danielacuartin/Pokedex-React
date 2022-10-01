@@ -9,6 +9,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+
   
 }
 .Body {
@@ -41,10 +44,19 @@
 .logo-pagina {width: 200px;}
 
 .barra-principal {
-  background-color: #bb2a12;
-  padding: 30px 40px;
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-}
 
+ 
+    height: 95px;
+    background-color: rgb(158, 27, 27);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    }
+
+.stats{
+ width: 50%;
+
+  }
+ 
+ 

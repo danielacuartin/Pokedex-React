@@ -1,15 +1,19 @@
 import './AbilityPokemon.css';
-const AbilityPokemon = () => {
-return (
- 
+const AbilityPokemon = ({ abilities }) =>  {
 
-    <div class="habilidades">
-        <a href="#">Chlorophyll</a>
-        <br/>
-        <a href="#">Overgrow</a>
-    </div>
-    
+ return (
+        <div className="Container-stats">
+       <span>
 
-)}
+                    {abilities.map((el) => {
+                        return (
+                            <p>{`${el.ability.name}`} </p>
+                        )
+                    })}
+                </span>
+
+        </div>
+ )
+}
 
 export default AbilityPokemon;

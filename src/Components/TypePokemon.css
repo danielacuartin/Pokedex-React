@@ -4,26 +4,14 @@
     margin: 20px 20px 20px 0;
 }
 
- .typeA {
+.button {
     height: 2em;
     width: 5em;
-    background: linear-gradient(#78c850, #5ca935);
-    border: 1px solid #4A892B;
-    border-color: #4A892B;
-    border-radius: 5px 0px 0px 5px;
+    border: 1px solid ;
+
+    border-radius: 5px;
     color: #FFF;
     text-shadow: 1px 1px 1px #333;
     cursor: pointer;
 }
 
-.typeB {
-    height: 2em;
-    width: 5em;
-    background: linear-gradient(#a040a0, #803380);
-    border: 1px solid #662966;
-    border-color: #662966;
-    border-radius: 0px 5px 5px 0px;
-    color: #FFF;
-    text-shadow: 1px 1px 1px #333;
-    cursor: pointer;
-}

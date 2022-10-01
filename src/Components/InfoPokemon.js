@@ -1,7 +1,7 @@
 import './InfoPokemon.css'
 const InfoPokemon = () => {
 return (
-<div class="info">
+<div className="info">
     <p>Type:</p>
     <p>Abilities:</p>
 </div>)

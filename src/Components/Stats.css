@@ -1,0 +1,5 @@
+.Container-stats {
+    display:flex;
+    flex-grow: 2;
+justify-content: space-around;
+margin-top: 9%;}
