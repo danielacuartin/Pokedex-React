@@ -1,15 +1,13 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import InputPokemon from "./Components/InputPokemon";
-
 import AbilityPokemon from "./Components/AbilityPokemon";
 import TypePokemon from "./Components/TypePokemon";
 import Stats from "./Components/Stats";
 import { PokeTypeColor } from "./utils";
-import abajo from "./down.png";
-import arriba from "./arriba.png"
-import fuente from "./RetroGaming.ttf"
-
+import arriba from "./arriba.png";
+import fuente from "./RetroGaming.ttf";
+import background from "./fondo.jpg";
 
 function App() {
   const [pokemonName, setPokemonName] = useState("");
@@ -39,42 +37,49 @@ function App() {
     return () => {};
   }, []);
   return (
-    <div className="Body">
-       
+    <div
+      className="Body"
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "auto 100%",
+        padding: "100px 0 100px 0",
+      }}
+    >
       {pokemonDataObject && (
-        <main className="poke-card" >
-        <img className="arriba" src={arriba} alt=""/>
-        <div className="contenedor-estilo"> <div className="linea-negra"> <InputPokemon
-          searchInput={searchInput}
-          setSearchInput={setSearchInput}
-          setPokemonName={setPokemonName}
-          setPokemonSprite={setPokemonSprite}
-          setPokemonDataObject={setPokemonDataObject}
-        />
-          <div className="img-container">
-            <h1 style={ 
-          {FontFamily: {fuente}}
-        }>{pokemonName}</h1>
-            <img
-              className="poke-img"
-              style={{
-                backgroundImage: `radial-gradient(${PokeTypeColor(
-                  pokemonDataObject.types[1]?.type?.name || "#2A1A1F"
-                )} 33%, ${PokeTypeColor(
-                  pokemonDataObject.types[0].type.name
-                )} 33%)`,
-                backgroundSize: "9px 9px",
-              }}
-              src={pokemonSprite ? pokemonSprite : ""}
-              alt="pokemon-sprite"
-            />
+        <main className="poke-card">
+          <img className="arriba" src={arriba} alt="" />
+          <div className="contenedor-estilo">
+            <div className="linea-negra">
+              <InputPokemon 
+                searchInput={searchInput}
+                setSearchInput={setSearchInput}
+                setPokemonName={setPokemonName}
+                setPokemonSprite={setPokemonSprite}
+                setPokemonDataObject={setPokemonDataObject}
+              />
+              <div className="img-container">
+                <h1 style={{ FontFamily: { fuente } }}>{pokemonName}</h1>
+                <img
+                  className="poke-img"
+                  style={{
+                    backgroundImage: `radial-gradient(${PokeTypeColor(
+                      pokemonDataObject.types[1]?.type?.name || "#2A1A1F"
+                    )} 33%, ${PokeTypeColor(
+                      pokemonDataObject.types[0].type.name
+                    )} 33%)`,
+                    backgroundSize: "9px 9px",
+                  }}
+                  src={pokemonSprite ? pokemonSprite : ""}
+                  alt="pokemon-sprite"
+                />
+              </div>
+              <TypePokemon types={pokemonDataObject.types} />
+              <AbilityPokemon abilities={pokemonDataObject.abilities} />
+              <Stats stats={pokemonDataObject.stats} />
+            </div>
           </div>
-          <TypePokemon types={pokemonDataObject.types} />
-          <AbilityPokemon abilities={pokemonDataObject.abilities} />
-          <Stats stats={pokemonDataObject.stats} />
-          </div>
-          </div>
-          <img className="abajo" src={abajo} alt=""/>
+          <img className="abajo" src={arriba} alt="" />
         </main>
       )}
     </div>

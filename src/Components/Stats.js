@@ -1,4 +1,5 @@
 import './Stats.css'
+import Bar from './Bar'
 function formatStatName(stats) {
     switch (stats) {
         case "hp":
@@ -28,20 +29,19 @@ const Stats = ({ stats }) => {
 
     return (
         <div className="poke-stats">
-            <div className='StatsText'>
-                {stats && stats.map(el => (
-                    <p>{formatStatName(el.stat.name)}:</p>
-                ))}
-            </div>
-
-            <span>
-
-                    {stats.map((el) => {
-                        return (
-                            <p>{`${el.base_stat}`} </p>
-                        )
-                    })}
-                </span>
+            <table className='Tabla'>
+        <tbody>
+            {stats && stats.map((el) => (
+                <tr key={el.stat.name}>
+                    <th> {formatStatName(el.stat.name)} </th>
+                    <td style={{ width: "100%", minWidth: "100%" }}>
+                        <Bar baseStat={el.base_stat} />
+                    </td>
+                    <td> {el.base_stat} </td>
+                </tr>
+            ))}
+        </tbody>
+    </table>
 
             </div>
     )

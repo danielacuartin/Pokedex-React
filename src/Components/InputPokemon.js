@@ -4,7 +4,7 @@ const InputPokemon = (props) => {
     const { searchInput, setSearchInput, setPokemonName, setPokemonSprite, setPokemonDataObject } = props;
 
 return (
-    <section>
+
       <form className='
       Formulario'
   
@@ -27,12 +27,12 @@ return (
           type="text"
           name="name"
           value={searchInput}
-          placeholder="SEARCH..."
+          placeholder="Inserte Pokemon" 
           onChange={(e) => { setSearchInput(e.target.value) }}
         />
       </form>
      
-    </section>
+   
   );
 }
 
