@@ -1,62 +1,76 @@
-.Types-Ability {
-  display: flex;
-  flex-direction: column;
+
+form {
+  width: 200px;
+  margin: 20px auto;
 }
 
-.container {
-  width: 100%;
-  height: 100px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-left: 5%;
-  margin-right: 5%;
+input {
+  max-width: 600px;
+  padding: 10px;
+  margin-top: 29px;
+}
 
+.poke-card {
+  position: relative;
+  height: fit-content;
+  font-family: 'Roboto Mono', monospace;
+  max-width:800px;
+  border-radius: 10px;
+  color: rgb(69, 69, 69);
+  text-align: center;
+  padding: 0px;
+  margin: 0 auto;
+  background-color: #FFF;
+  border: 1px solid #b0e4f4
+  ;
+  font-family: Retro-Gaming;
   
 }
-.Body {
-  margin: 0;
+
+
+.img-container {
+  position: relative;
+  width: 180px;
+  margin: 10px auto;
 }
 
-.ContainerImgName{
-  display: flex;
-  flex-direction: column;
+.poke-img {
+  width: 180px;
+  border-radius: 50%;
+  
 }
 
-.results {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 10px;
- 
-  flex-direction: row;
-  align-content: flex-end;
-  margin: 50px;
+.abajo {
+  margin: 0 -100px -50px -100px;
+  width: 105%;
+  height: auto;
+  position: relative;
+  
 }
 
-.PokemonImg {
-  width: 200px;
-  border: 3px solid var(--border-img);
-  border-radius: 10px;
-  box-shadow: 4px 4px 5px #111;
+
+.arriba {
+  margin: -10px -100px -10px -100px;
+  width: 105%;
+  height: auto;
+  position: relative;
+  
 }
 
-.logo-pagina {width: 200px;}
+.contenedor-estilo {
+  border: 20px solid #b0e4f4
+  ;
 
-.barra-principal {
-
+}
  
-    height: 95px;
-    background-color: rgb(158, 27, 27);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    }
+.linea-negra { border: 30px solid black
+  ;
 
-.stats{
- width: 50%;
+background-color: rgb(255, 255, 255);}
 
-  }
- 
- 
+
+
+@font-face {
+  font-family: 'Retro-Gaming';
+  src: local('Retro-Gaming'), url(./Retro-Gaming.otf) format('opentype');
+}

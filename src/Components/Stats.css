@@ -1,5 +1,8 @@
-.Container-stats {
-    display:flex;
-    flex-grow: 2;
-justify-content: space-around;
-margin-top: 9%;}
+.poke-stats  {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    padding: 5px;
+    font-size: 18px;
+    margin: 25px;
+}

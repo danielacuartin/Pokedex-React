@@ -1,17 +1,16 @@
-.ContainerType {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 20px 20px 0;
+.poke-types {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 4px;
+    border: 1px dashed;
+    margin: 2px 10px 4px 10px;
+ 
+   
 }
 
 .button {
-    height: 2em;
-    width: 5em;
-    border: 1px solid ;
+font-size: 20px;
 
-    border-radius: 5px;
-    color: #FFF;
-    text-shadow: 1px 1px 1px #333;
-    cursor: pointer;
+border-color: white;
+box-shadow: none;
 }
-

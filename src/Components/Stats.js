@@ -27,7 +27,7 @@ function formatStatName(stats) {
 const Stats = ({ stats }) => {
 
     return (
-        <div className="Container-stats">
+        <div className="poke-stats">
             <div className='StatsText'>
                 {stats && stats.map(el => (
                     <p>{formatStatName(el.stat.name)}:</p>
