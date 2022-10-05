@@ -8,6 +8,7 @@ import { PokeTypeColor } from "./utils";
 import arriba from "./arriba.png";
 import fuente from "./RetroGaming.ttf";
 import background from "./fondo.jpg";
+import abajo from "./abajo.png";
 
 function App() {
   const [pokemonName, setPokemonName] = useState("");
@@ -16,7 +17,7 @@ function App() {
   const [pokemonDataObject, setPokemonDataObject] = useState();
 
   useEffect(() => {
-    fetch(`https://pokeapi.co/api/v2/pokemon/pikachu/`)
+    fetch(`https://pokeapi.co/api/v2/pokemon/bulbasaur`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -43,7 +44,8 @@ function App() {
         backgroundImage: `url(${background})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "auto 100%",
-        padding: "100px 0 100px 0",
+        padding: "400px 0 400px 0",
+        height: "auto",
       }}
     >
       {pokemonDataObject && (
@@ -79,7 +81,7 @@ function App() {
               <Stats stats={pokemonDataObject.stats} />
             </div>
           </div>
-          <img className="abajo" src={arriba} alt="" />
+          <img className="abajo" src={abajo} alt="" />
         </main>
       )}
     </div>

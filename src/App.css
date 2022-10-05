@@ -8,13 +8,13 @@ form {
 
 .poke-card {
   position: relative;
-  height: fit-content;
+  height: auto;
   font-family: 'Roboto Mono', monospace;
-  max-width:800px;
+  max-width:780px;
   border-radius: 10px;
   color: rgb(69, 69, 69);
   text-align: center;
-  padding: 0px;
+  /* padding: 0px; */
   margin: 0 auto;
   background-color: transparent;
  
@@ -36,31 +36,90 @@ form {
 }
 
 .abajo {
-  margin: -25px -150px -50px -150px;
-  width: 105%;
+  margin: -450px -110px 0 -105px;
+  width: 106%;
   height: auto;
-  position: relative;
-  transform: rotate(180deg);
+  animation-name: movimiento-abajo;
+  animation-duration: 2s;
+  animation-direction: alternate-reverse;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+  animation-play-state: running ;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
   
+}
+@keyframes movimiento-arriba {
+  0% {
+    top: auto;
+    transform: translateY(-340px);
+  }
+  50% {
+    top: auto;
+    transform: translateY(-160px);
+  }
+
+  100% {
+    top: auto;
+    transform: translateY(0);
+  }
 }
 
 
 .arriba {
-  margin: -10px -100px -20px -100px;
-  width: 105%;
+  margin: 0 -105px -450px -105px;
+  width: 106%;
   height: auto;
   position: relative;
-  
+  z-index: 100;
+  animation-name: movimiento-arriba;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+animation-direction: reverse;
+animation-timing-function: linear;
+animation-play-state: paused;
+animation-play-state: running ;
+animation-fill-mode: forwards;
+animation-delay: 3s;
+
+
+
+}
+
+
+
+
+@keyframes movimiento-abajo {
+  0% {
+    bottom: auto;
+    transform: translateY(340px);
+  }
+  50% {
+    bottom: auto;
+    transform: translateY(160px);
+  }
+
+  100% {
+    bottom: auto;
+    transform: translateY(0);
+  }
 }
 
 .contenedor-estilo {
-  border: 20px solid #b0e4f4
+  border: 30px solid #60d4e4
   ;
+border-top: 10px;
+border-bottom: 0;
+
 
 }
  
-.linea-negra { border: 30px solid black
-  ;
+.linea-negra { border-left: 30px solid black;
+  border-right: 30px solid black;
+  border-radius: auto;
+  border-bottom: 50px solid black;
+  border-top: 50px solid black;
+  
 
 background-color: rgb(255, 255, 255);}
 
