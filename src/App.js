@@ -45,7 +45,7 @@ function App() {
         backgroundRepeat: "no-repeat",
         backgroundSize: "auto 100%",
         padding: "400px 0 400px 0",
-        height: "auto",
+        height: "1300px",
       }}
     >
       {pokemonDataObject && (
